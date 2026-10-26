@@ -2,7 +2,7 @@
  * Configuration for hello-world demo.
  *
  * PROJECT_ATTRIBUTE is the canonical multi-tenant pattern on Arkiv.
- * Braga is a shared, public testnet, so every entity from every project lives
+ * Tiramisu is a shared, public testnet, so every entity from every project lives
  * in the same store. Every Arkiv project should stamp a unique attribute on
  * every write and filter on it in every query. Without it, your queries return
  * everyone else's data.

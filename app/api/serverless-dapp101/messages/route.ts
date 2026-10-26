@@ -11,7 +11,7 @@ const MESSAGE_TYPE = 'workshop_message';
  * GET /api/serverless-dapp101/messages
  *
  * Lists all messages for this project. Filters by PROJECT_ATTRIBUTE so this
- * query only sees this workshop's data, never other projects sharing Braga.
+ * query only sees this workshop's data, never other projects sharing Tiramisu.
  */
 export async function GET() {
   try {

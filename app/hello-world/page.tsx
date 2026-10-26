@@ -90,7 +90,7 @@ export default function ArkivHelloWorld() {
               and independently verifiable!
             </p>
             <p className="text-xs text-blue-700 mb-2">
-              🌐 Connected to <strong>Braga Testnet</strong> •
+              🌐 Connected to <strong>Tiramisu Testnet</strong> •
               Each message is stored as an <strong>entity</strong> (created via a <strong>transaction</strong>) • 
               Click links below to verify on the explorer
             </p>
@@ -103,10 +103,10 @@ export default function ArkivHelloWorld() {
 
           {lastWrite && (
             <div className="bg-green-50 border border-green-200 rounded-lg p-4 mb-6">
-              <p className="text-sm font-semibold text-green-800 mb-1">Posted! Both views on the Braga explorer:</p>
+              <p className="text-sm font-semibold text-green-800 mb-1">Posted! Both views on the Tiramisu explorer:</p>
               <div className="flex flex-wrap gap-4 text-xs font-mono">
                 <a
-                  href={`https://explorer.braga.hoodi.arkiv.network/entity/${lastWrite.entityKey}`}
+                  href={`https://tiramisu.explorer.arkiv.network/entity/${lastWrite.entityKey}`}
                   target="_blank"
                   rel="noopener noreferrer"
                   className="text-green-700 hover:underline"
@@ -114,7 +114,7 @@ export default function ArkivHelloWorld() {
                   Entity: {lastWrite.entityKey.slice(0, 16)}...
                 </a>
                 <a
-                  href={`https://explorer.braga.hoodi.arkiv.network/tx/${lastWrite.txHash}`}
+                  href={`https://tiramisu.explorer.arkiv.network/tx/${lastWrite.txHash}`}
                   target="_blank"
                   rel="noopener noreferrer"
                   className="text-green-700 hover:underline"
@@ -181,7 +181,7 @@ export default function ArkivHelloWorld() {
                         <div className="flex flex-col gap-1">
                           <span className="text-xs font-semibold text-gray-400 uppercase">Entity</span>
                           <a
-                            href={`https://explorer.braga.hoodi.arkiv.network/entity/${msg.id}`}
+                            href={`https://tiramisu.explorer.arkiv.network/entity/${msg.id}`}
                             target="_blank"
                             rel="noopener noreferrer"
                             className="text-blue-600 hover:text-blue-700 hover:underline text-xs font-mono"
@@ -194,7 +194,7 @@ export default function ArkivHelloWorld() {
                           <div className="flex flex-col gap-1">
                             <span className="text-xs font-semibold text-gray-400 uppercase">Transaction</span>
                             <a
-                              href={`https://explorer.braga.hoodi.arkiv.network/tx/${msg.txHash}`}
+                              href={`https://tiramisu.explorer.arkiv.network/tx/${msg.txHash}`}
                               target="_blank"
                               rel="noopener noreferrer"
                               className="text-blue-600 hover:text-blue-700 hover:underline text-xs font-mono"
@@ -219,7 +219,7 @@ export default function ArkivHelloWorld() {
               <li>• Creating an entity is also a <strong>transaction</strong> on the blockchain</li>
               <li>• <strong>Entity</strong> = the data (your message, attributes, payload)</li>
               <li>• <strong>Transaction</strong> = the blockchain operation that creates/records that entity</li>
-              <li>• Every entity is stamped with a <strong>project attribute</strong> so this app only reads its own data on shared Braga</li>
+              <li>• Every entity is stamped with a <strong>project attribute</strong> so this app only reads its own data on shared Tiramisu</li>
               <li>• No central database required!</li>
             </ul>
             <div className="bg-gray-50 rounded-lg p-3 text-xs text-gray-600">

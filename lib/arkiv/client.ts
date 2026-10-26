@@ -5,9 +5,10 @@
  * Provides public client for reads and wallet client for writes.
  */
 
-import { createPublicClient, createWalletClient, http } from "@arkiv-network/sdk"
-import { privateKeyToAccount } from "@arkiv-network/sdk/accounts"
-import { braga } from "@arkiv-network/sdk/chains"
+import { createPublicClient, createWalletClient } from "@arkiv-network/sdk"
+import { http } from "viem"
+import { privateKeyToAccount } from "viem/accounts"
+import { tiramisu } from "@arkiv-network/sdk/chains"
 
 /**
  * Get public client for read operations
@@ -15,7 +16,7 @@ import { braga } from "@arkiv-network/sdk/chains"
  */
 export function getPublicClient() {
   return createPublicClient({
-    chain: braga,
+    chain: tiramisu,
     transport: http(),
   });
 }
@@ -24,11 +25,11 @@ export function getPublicClient() {
  * Get wallet client from private key (server-side use)
  *
  * @param privateKey - Private key in format 0x...
- * @returns Wallet client configured for Braga testnet
+ * @returns Wallet client configured for Tiramisu testnet
  */
 export function getWalletClientFromPrivateKey(privateKey: `0x${string}`) {
   return createWalletClient({
-    chain: braga,
+    chain: tiramisu,
     transport: http(),
     account: privateKeyToAccount(privateKey),
   });
